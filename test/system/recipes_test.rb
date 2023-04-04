@@ -14,11 +14,11 @@ class RecipesTest < ApplicationSystemTestCase
     visit recipes_url
     click_on "New Recipe"
 
+    fill_in "Category", with: @recipe.category
     fill_in "Ingredients", with: @recipe.ingredients
     fill_in "Instructions", with: @recipe.instructions
     fill_in "Name", with: @recipe.name
     fill_in "Rating", with: @recipe.rating
-    fill_in "Type", with: @recipe.type
     click_on "Create Recipe"
 
     assert_text "Recipe was successfully created"
@@ -29,11 +29,11 @@ class RecipesTest < ApplicationSystemTestCase
     visit recipes_url
     click_on "Edit", match: :first
 
+    fill_in "Category", with: @recipe.category
     fill_in "Ingredients", with: @recipe.ingredients
     fill_in "Instructions", with: @recipe.instructions
     fill_in "Name", with: @recipe.name
     fill_in "Rating", with: @recipe.rating
-    fill_in "Type", with: @recipe.type
     click_on "Update Recipe"
 
     assert_text "Recipe was successfully updated"
