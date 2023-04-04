@@ -2,7 +2,7 @@
 
 <h1>Recipes</h1>
 
-<table>
+<table class="w3-table w3-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -22,9 +22,9 @@
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.instructions %></td>
         <td><%= recipe.rating %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', recipe, :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe), :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', recipe, :class => "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<%= link_to 'New Recipe', new_recipe_path, :class => "btn btn-primary" %>
