@@ -166,8 +166,8 @@ RSpec.feature "Recipes", type: :feature do
         visit root_path
       end
 
-     scenario "should be successful" do       
-      click_link 'Destroy'
+     scenario "should be successful" do      
+      click_button 'Delete'
       click_button "Ok"
       expect(page).to have_content("Recipe was successfully destroyed.")
     end

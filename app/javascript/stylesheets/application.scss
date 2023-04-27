@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+}
+
+.btn-primary {
+    color: rgb(255, 255, 255)
+    border-color: black;
+    margin-bottom: 5px;
+    background-color: rgb(8, 30, 56);
+    display: inline-block;
+}
+
+table {
+    table-layout: fixed;
+    width: 50%;
+    font-size: 16px;
+}
