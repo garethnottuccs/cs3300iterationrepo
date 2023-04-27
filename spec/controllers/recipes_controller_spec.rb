@@ -12,7 +12,7 @@ RSpec.describe RecipesController, type: :controller do
     describe "GET #index" do
         it "returns a success response" do
             Recipe.create! valid_attributes
-            get recipes_url
+            get :index, params: {}, session: valid_session
 
             # Make sure to swap this as well
             expect(response).to have_http_status(:ok) # be_successful expects a HTTP Status code of 200
