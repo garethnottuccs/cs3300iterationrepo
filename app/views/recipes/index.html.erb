@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
+      <th>Category</th>
       <th>Ingredients</th>
       <th>Instructions</th>
       <th>Rating</th>
@@ -18,15 +18,13 @@
     <% @recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.name %></td>
-        <td><%= recipe.type %></td>
+        <td><%= recipe.category %></td>
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.instructions %></td>
         <td><%= recipe.rating %></td>
         <td><%= link_to 'Show', recipe %></td>
-        <% if user_signed_in? %>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <td><% if user_signed_in? %><%= link_to 'Edit', edit_recipe_path(recipe) %><% end %></td>
+        <td><% if user_signed_in? %><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +32,4 @@
 
 <br>
 
-<% if user_signed_in? %> <%= link_to 'New Recipe', new_recipe_path %> <% end %>
+<% if user_signed_in? %><%= link_to 'New Recipe', new_recipe_path %><% end %>
