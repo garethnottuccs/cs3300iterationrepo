@@ -158,27 +158,18 @@ RSpec.feature "Recipes", type: :feature do
       end
   end
 
-
-
-
     context "Delete project" do
-    let(:recipe) { Recipe.create(name: "Test name", category: "Test category", ingredients: "Test ingredients", instructions: "Test instructions", rating: 1) }
-    before(:each) do
-      user = FactoryBot.create(:user)
-      login_as(user)
-      visit root_path
-    end
+      let(:recipe) { Recipe.create(name: "Test name", category: "Test category", ingredients: "Test ingredients", instructions: "Test instructions", rating: 1) }
+      before(:each) do
+        user = FactoryBot.create(:user)
+        login_as(user)
+        visit root_path
+      end
 
      scenario "should be successful" do       
-      click_link('Destroy')
+      click_link 'Destroy'
       click_button "Ok"
       expect(page).to have_content("Recipe was successfully destroyed.")
     end
   end
-
-
-
-
-
-
 end
