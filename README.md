@@ -1,24 +1,5 @@
-# README
+# Recipe Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gareth Nott CS3300 Repo
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Basic browser-based application for keeping track of recipes using Ruby on Rails. 
